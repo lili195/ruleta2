@@ -1,6 +1,6 @@
 package testCircularList;
 
-import roulette.Roulette;
+import com.uptc.prg3.roulette.server.models.Roulette;
 
 /**
  * TAREA

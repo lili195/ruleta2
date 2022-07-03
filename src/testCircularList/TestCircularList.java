@@ -1,6 +1,6 @@
 package testCircularList;
 
-import circularList.SimpleCirularList;
+import com.uptc.prg3.roulette.server.circularList.SimpleCirularList;
 
 public class TestCircularList {
     public static void main(String[] args) {

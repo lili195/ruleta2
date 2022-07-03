@@ -1,9 +1,5 @@
 package testCircularList;
 
-import model.OptionRoulette;
-import model.RouletteSet;
-import roulette.Roulette;
-
 public class TestRouletteSet {
     public static void main(String[] args) {
         // OptionRoulette[] options = new OptionRoulette[]{

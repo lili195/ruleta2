@@ -1,6 +1,6 @@
 package testCircularList;
 
-import view.JWindowMain;
+import com.uptc.prg3.roulette.client.view.JWindowMain;
 
 /**
  * revisar moodle, trabajo en grupo
