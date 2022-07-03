@@ -4,9 +4,9 @@ import javax.swing.*;
 import java.awt.*;
 
 public class JWindowMain extends JWindow {
-    /*private JPanelRouletteSet rouletteSetPanel;
-    private JButton playButton;*/
     private JPanelTopBar topBar;
+    private JPanelCenterWest centerWest;
+    private JPanelCenterEast centerEast;
 
     /*public JWindowMain(int size) {
         super();
@@ -15,9 +15,11 @@ public class JWindowMain extends JWindow {
         this.init();
     }*/
 
-    public JWindowMain () {
+    public JWindowMain (int size) {
         super();
         this.topBar = new JPanelTopBar();
+        this.centerWest = new JPanelCenterWest(size);
+        this.centerEast = new JPanelCenterEast();
         init();
     }
     private void init() {
@@ -25,6 +27,9 @@ public class JWindowMain extends JWindow {
         this.setLocationRelativeTo(null);
         this.setLayout(new BorderLayout());
         this.add(topBar, BorderLayout.NORTH);
+        this.add(centerWest, BorderLayout.CENTER);
+        this.add(centerEast, BorderLayout.EAST);
+
         this.setVisible(true);
 /*
         this.playButton.setText("START");

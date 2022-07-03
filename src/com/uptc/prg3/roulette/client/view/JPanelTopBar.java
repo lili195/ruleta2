@@ -36,10 +36,10 @@ public class JPanelTopBar extends JPanel {
         middle.setLayout(new FlowLayout(FlowLayout.CENTER));
         middle.add(rouletteLbl);
         middle.add(timeLbl);
+        this.add(middle);
 
         exitBtn.setText(Constants.EXIT_BTN_TEXT);
         rightSide.setLayout(new FlowLayout());
-        rightSide.add(rouletteLbl);
         rightSide.add(exitBtn);
         this.add(rightSide);
     }

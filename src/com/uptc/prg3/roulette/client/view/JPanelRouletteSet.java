@@ -17,8 +17,6 @@ public class JPanelRouletteSet extends JPanel {
     }
 
     private void init() {
-        this.setBorder(BorderFactory.createLineBorder(Color.BLACK));
-        this.setBackground(Color.GREEN);
         this.setPreferredSize(new Dimension(200*this.rPanels.length,200));
         this.setLayout(new GridLayout(1,this.rPanels.length, 20, 20));
         for (JPanelRoulette jPanelRoulette : rPanels) {
