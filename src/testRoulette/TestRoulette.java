@@ -1,4 +1,4 @@
-package testCircularList;
+package testRoulette;
 
 import com.uptc.prg3.roulette.server.models.Roulette;
 

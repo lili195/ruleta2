@@ -1,22 +1,19 @@
-package persistence;
+package com.uptc.prg3.roulette.server.persistence;
 
-import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
-import java.io.ObjectInputStream;
 import java.io.RandomAccessFile;
-import java.net.Socket;
 import java.util.ArrayList;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
+import com.uptc.prg3.roulette.server.models.Score;
 
-import model.Score;
 
 public class FileScores {
 
-	private static final String ROUTE_FILE = "files/scores.sp";
+	private static final String ROUTE_FILE = "./resources/percistence/scores.sp";
 	private Gson gson;
 	private RandomAccessFile file;
 

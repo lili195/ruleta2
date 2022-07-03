@@ -1,4 +1,4 @@
-package model;
+package com.uptc.prg3.roulette.server.models;
 
 public class Score {
 
