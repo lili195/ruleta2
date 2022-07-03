@@ -11,35 +11,40 @@ public class JPanelCenterEast extends JPanel {
                                     Constants.THIRD_POINT_OP,
                                     Constants.FOURTH_POINT_OP,
                                     Constants.FIFTH_POINT_OP};
-    private JPanel top, bottom;
+    private JPanel top, bottom, earningsPanel;
 
     public JPanelCenterEast() {
         this.bet = new JLabel();
         this.betOption = new JComboBox(this.betOptions);
         this.earnings = new JLabel();
-        this.earningResult = new JLabel();
+        this.earningResult = new JLabel("xxxx");
         this.top = new JPanel();
         this.bottom = new JPanel();
+        this.earningsPanel = new JPanel();
         init();
     }
     private void init() {
-        this.setBorder(BorderFactory.createLineBorder(Color.BLACK));
-        this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+        this.setPreferredSize(new Dimension(150,200));
+        this.setLayout(null);
         bet.setText(Constants.BET_TEXT);
+        top.setBounds(25,10,100,50);
         top.setLayout(new BoxLayout(top, BoxLayout.Y_AXIS));
         top.add(bet);
-        betOption.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         top.add(betOption);
 
         this.add(top);
 
         earnings.setText(Constants.EARNINGS_TEXT);
-        bottom.setLayout(new BorderLayout());
-        bottom.add(earnings, BorderLayout.NORTH);
-        earningResult.setBorder(BorderFactory.createLineBorder(Color.BLACK));
-        bottom.add(earningResult, BorderLayout.SOUTH);
+        bottom.setBounds(25,110,100,50);
+        bottom.setLayout(new BoxLayout(bottom, BoxLayout.Y_AXIS));
+        bottom.add(earnings);
+        earningsPanel.setLayout(new FlowLayout());
+        earningsPanel.add(earningResult);
+        earningsPanel.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+        bottom.add(earningsPanel);
 
         this.add(bottom);
+        this.setBorder(BorderFactory.createLineBorder(Color.BLACK));
     }
 
     public void setEarningsText(String earnings) {

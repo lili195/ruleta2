@@ -27,6 +27,8 @@ public class Constants {
     public static final String THIRD_POINT_OP = "300";
     public static final String FOURTH_POINT_OP = "500";
     public static final String FIFTH_POINT_OP = "1000";
+    // CANTIDAD DE LAS RULETAS
+    public static final int ROULETTE_AMOUNT  = 3;
     // LABELS DEL RANKIN
     public static final String RANKIN_TEXT = "PAYERS RANKIN";
     public static final String RANKIN_PLAYER_TEXT = "NOMBRE";

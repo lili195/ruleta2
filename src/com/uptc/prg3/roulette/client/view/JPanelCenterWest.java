@@ -6,8 +6,8 @@ import java.awt.*;
 public class JPanelCenterWest extends JPanel {
     private JPanelRouletteSet rouletteSet;
 
-    public JPanelCenterWest (int size) {
-        this.rouletteSet = new JPanelRouletteSet(size);
+    public JPanelCenterWest () {
+        this.rouletteSet = new JPanelRouletteSet();
         init();
     }
 

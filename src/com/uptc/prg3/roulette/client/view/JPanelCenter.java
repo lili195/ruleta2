@@ -7,16 +7,17 @@ public class JPanelCenter extends JPanel {
     private JPanelCenterEast centerEast;
     private JPanelCenterWest centerWest;
 
-    public JPanelCenter(int size) {
+    public JPanelCenter() {
         this.centerEast = new JPanelCenterEast();
-        this.centerWest = new JPanelCenterWest(size);
+        this.centerWest = new JPanelCenterWest();
         init();
     }
 
     private void init() {
-        this.setBorder(BorderFactory.createLineBorder(Color.BLACK));
-        this.setLayout(new BorderLayout(20,20));
-        this.add(centerEast, BorderLayout.EAST);
-        this.add(centerWest, BorderLayout.WEST);
+        this.setLayout(null);
+        this.centerWest.setBounds(10,10,600,220);
+        this.centerEast.setBounds(630,15,150,200);
+        this.add(centerEast);
+        this.add(centerWest);
     }
 }

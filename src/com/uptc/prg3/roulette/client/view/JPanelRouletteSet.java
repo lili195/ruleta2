@@ -7,16 +7,17 @@ import java.awt.*;
 public class JPanelRouletteSet extends JPanel {
     private JPanelRoulette[] rPanels;
 
-    public JPanelRouletteSet(int size) {
+    public JPanelRouletteSet() {
         super();
-        this.rPanels = new JPanelRoulette[size];
-        for (int i = 0; i < size; i++) {
+        this.rPanels = new JPanelRoulette[Constants.ROULETTE_AMOUNT];
+        for (int i = 0; i < Constants.ROULETTE_AMOUNT; i++) {
             rPanels[i] = new JPanelRoulette();
         }
         init();
     }
 
     private void init() {
+        this.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         this.setPreferredSize(new Dimension(200*this.rPanels.length,200));
         this.setLayout(new GridLayout(1,this.rPanels.length, 20, 20));
         for (JPanelRoulette jPanelRoulette : rPanels) {
