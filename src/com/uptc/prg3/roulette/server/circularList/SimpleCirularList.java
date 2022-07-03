@@ -1,11 +1,20 @@
 package com.uptc.prg3.roulette.server.circularList;
+
+import java.util.Comparator;
+
 // simplemente enlazada
 public class SimpleCirularList <T> {
     private Node<T> any;
-    
-    public SimpleCirularList() {
+    private Comparator<T> comparator;
 
+    public SimpleCirularList() {
         this.any = null;
+        this.comparator = null;
+    }
+
+    public SimpleCirularList(Comparator<T> comparator) {
+        this.any = null;
+        this.comparator = comparator;
     }
 
     public Node<T> getAny() {
@@ -33,8 +42,32 @@ public class SimpleCirularList <T> {
         return this;
     }
 
+    public int size() {
+        Node<T> current = this.any.next;
+        int count = 0;
+        if (current != null) {
+            while (current != this.any) {
+                current = current.next;
+                count++;
+            }
+        }
+        return count;
+    }
+
     public void delete(T info) {
-        //TODO
+        if (this.any != null) {
+            Node<T> node = this.any;
+            Node<T> next = this.any.next;
+            for (int i = 0; i < size(); i++) {
+                if (this.comparator.compare(next.info, info) == 0) {
+                    node.next = next.next;
+                    break;
+                } else {
+                    node = node.next;
+                    next = node.next;
+                }
+            }
+        }
     }
 
     public void search(T info) {
