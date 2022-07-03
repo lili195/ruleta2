@@ -15,6 +15,8 @@ public class Constants {
     //  NOMBRES DE BOTONES
     public static final String RANKIN_BTN_TEXT = "RANKIN";
     public static final String INFO_BTN_TEXT = "INFO";
+    public static final String MAIN_TITTLE_TEXT = "     RULETA    ";
+    public static final String TIME_TITTLE_TEXT = "   TIEMPO RESTANTE: ";
     public static final String EXIT_BTN_TEXT = "SALIR";
     //  LABELS DE LA APUESTA
     public static final String BET_TEXT = "APUESTA";
