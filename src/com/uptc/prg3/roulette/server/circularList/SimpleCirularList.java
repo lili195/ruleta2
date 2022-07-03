@@ -5,7 +5,7 @@ import java.util.Comparator;
 // simplemente enlazada
 public class SimpleCirularList <T> {
     private Node<T> any;
-    private Comparator<T> comparator;
+    private final Comparator<T> comparator;
 
     public SimpleCirularList() {
         this.any = null;
@@ -18,12 +18,10 @@ public class SimpleCirularList <T> {
     }
 
     public Node<T> getAny() {
-
         return this.any;
     }
 
     public boolean isEmpty() {
-
         return this.any == null;
     }
     /**
@@ -70,8 +68,19 @@ public class SimpleCirularList <T> {
         }
     }
 
-    public void search(T info) {
-        //TODO
+    public T search(T info) {
+        T isEmpty = null;
+        if (this.any != null) {
+            Node<T> current = this.any.next;
+            while (current != this.any) {
+                if (current.info == info) {
+                    isEmpty = current.info;
+                    break;
+                }
+                current = current.next;
+            }
+        }
+        return isEmpty;
     }
 
     /**

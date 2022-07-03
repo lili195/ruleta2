@@ -22,7 +22,10 @@ public class TestCircularList {
         for (int i = 0; i < sCirularList.size(); i++) {
             System.out.println(i + ". " + sCirularList.nextAndGet());
         }
+        System.out.println("==========");
+        System.out.println(sCirularList.search("lili"));
         sCirularList.delete("lili");
+        System.out.println(sCirularList.search("lili"));
         System.out.println("==========");
         for (int i = 0; i < sCirularList.size(); i++) {
             System.out.println(i + ". " + sCirularList.nextAndGet());
