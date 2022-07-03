@@ -1,6 +1,7 @@
 package view;
 
 public class Constants {
+    // RUTAS DE LAS IMAGENES
     public static final String PATH_IMG1 = "src/resourses/images/bananas.png";
     public static final String PATH_IMG2 = "src/resourses/images/bar.png";
     public static final String PATH_IMG3 = "src/resourses/images/seven.png";
@@ -11,5 +12,20 @@ public class Constants {
     public static final String PATH_IMG8 = "src/resourses/images/diamond.png";
     public static final String PATH_IMG9 = "src/resourses/images/singleGrape.png";
     public static final String PATH_IMG10 = "src/resourses/images/cherries.png";
+    //  NOMBRES DE BOTONES
+    public static final String RANKIN_BTN_TEXT = "RANKIN";
+    public static final String INFO_BTN_TEXT = "INFO";
+    public static final String EXIT_BTN_TEXT = "SALIR";
+    //  LABELS DE LA APUESTA
+    public static final String BET_TEXT = "APUESTA";
+    public static final String EARNINGS_TEXT = "GANANCIA";
+    // LABELS DEL RANKIN
+    public static final String RANKIN_TEXT = "PAYERS RANKIN";
+    public static final String RANKIN_PLAYER_TEXT = "NOMBRE";
+    public static final String RANKIN_SCORE_TEXT = "PUNTAJE";
+    // LABELS DEL LOGIN
+    public static final String LOGIN_NICK_TEXT = "Escribe tu nombre de jugador";
+    public static final String LOGIN_OKBTN_TEXT = "Aceptar";
+    public static final String LOGIN_CANCELBTN_TEXT = "Cancelar";
 }
 
