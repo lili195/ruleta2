@@ -24,17 +24,25 @@ public class JPanelCenterEast extends JPanel {
     }
     private void init() {
         this.setBorder(BorderFactory.createLineBorder(Color.BLACK));
-        this.setLayout(new BorderLayout());
+        this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         bet.setText(Constants.BET_TEXT);
-        earnings.setText(Constants.EARNINGS_TEXT);
-        top.setLayout(new BorderLayout());
-        top.add(bet, BorderLayout.NORTH);
-        top.add(betOption, BorderLayout.SOUTH);
+        top.setLayout(new BoxLayout(top, BoxLayout.Y_AXIS));
+        top.add(bet);
+        betOption.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+        top.add(betOption);
 
-        this.add(top, BorderLayout.NORTH);
+        this.add(top);
+
+        earnings.setText(Constants.EARNINGS_TEXT);
+        bottom.setLayout(new BorderLayout());
+        bottom.add(earnings, BorderLayout.NORTH);
+        earningResult.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+        bottom.add(earningResult, BorderLayout.SOUTH);
+
+        this.add(bottom);
     }
 
-    public void setEarnings(String earnings) {
+    public void setEarningsText(String earnings) {
         this.earningResult.setText(earnings);
     }
 }

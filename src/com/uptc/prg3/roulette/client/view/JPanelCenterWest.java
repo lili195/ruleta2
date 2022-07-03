@@ -12,7 +12,6 @@ public class JPanelCenterWest extends JPanel {
     }
 
     private void init() {
-        this.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         this.setLayout(new FlowLayout());
         this.add(rouletteSet);
     }
