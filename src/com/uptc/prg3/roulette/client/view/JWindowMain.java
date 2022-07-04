@@ -2,17 +2,18 @@ package com.uptc.prg3.roulette.client.view;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 
 public class JWindowMain extends JWindow {
     private JPanelTopBar topBar;
     private JPanelCenter center;
     private JPanelSouth south;
 
-    public JWindowMain () {
+    public JWindowMain (ActionListener l) {
         super();
-        this.topBar = new JPanelTopBar();
-        this.center = new JPanelCenter();
-        this.south = new JPanelSouth();
+        this.topBar = new JPanelTopBar(l);
+        this.center = new JPanelCenter(l);
+        this.south = new JPanelSouth(l);
 
         init();
     }
@@ -36,5 +37,17 @@ public class JWindowMain extends JWindow {
 
     public void setTimeScore(int timeScore) {
         this.topBar.setTimeScore(timeScore);
+    }
+
+    public void startRoulettes(boolean b) {
+        center.startRoulettes(b);
+    }
+
+    public String getSelectedSlot() {
+        return south.getSelectedSlot();
+    }
+
+    public void updatePic(String name) {
+        south.updatePic(name);
     }
 }

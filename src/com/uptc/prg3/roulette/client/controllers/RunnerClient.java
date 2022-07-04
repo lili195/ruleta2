@@ -2,16 +2,18 @@ package com.uptc.prg3.roulette.client.controllers;
 
 import com.uptc.prg3.roulette.client.view.JWindowMain;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.Timer;
 
-public class RunnerClient {
+public class RunnerClient implements ActionListener {
 
     public static final int TIME_SLEEP_INTERVAL = 30;
     private JWindowMain jWindowMain;
     private SocketClient socketClient;
 
     public RunnerClient() {
-        this.jWindowMain = new JWindowMain();
+        this.jWindowMain = new JWindowMain(this);
         this.socketClient = new SocketClient();
         init();
     }
@@ -36,5 +38,23 @@ public class RunnerClient {
 
     public static void main(String[] args) {
         new RunnerClient();
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        Object source = e.getActionCommand();
+        String action = source.toString();
+        switch (action) {
+            case "exit":
+                jWindowMain.dispose();
+                break;
+            case "chosen":
+                String chosen = jWindowMain.getSelectedSlot();
+                jWindowMain.updatePic(chosen);
+                break;
+            case "play":
+                jWindowMain.startRoulettes(true);
+                break;
+        }
     }
 }

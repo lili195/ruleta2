@@ -1,15 +1,20 @@
 package com.uptc.prg3.roulette.client.view;
 
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
+import java.awt.*;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class JDialogScoreTable extends JDialog {
-    private JLabel labTittle;
-    private JButton btnExit;
-    private JTable table;
-
-
-//    public FrameScores(ArrayList<Object[]> table, ActionListener listener) {
-//        super("TOP 10 puntuaciones");
+//    private JLabel labTittle;
+//    private JButton btnExit;
+//    private JTable table;
+//
+//
+//    public JDialogScoreTable(ArrayList<Object[]> table, ActionListener listener) {
+//        super();
+//        this.setTitle("TOP 10 Puntuaciones");
 //        initComponents(table,listener);
 //    }
 //
@@ -64,14 +69,12 @@ public class JDialogScoreTable extends JDialog {
 //			model.addRow(result);
 //		}
 //
-//
-//
 //	}
 //
 //
 //	public void refreshTable(DefaultTableModel model) {
 //		table.setModel(model);
 //	}
-//
-//
+
+
 }

@@ -2,13 +2,14 @@ package com.uptc.prg3.roulette.client.view;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 
 public class JPanelSouth extends JPanel {
     private JPanelSouthEast southEast;
     private JPanelSouthWest southWest;
 
-    public JPanelSouth() {
-        this.southEast = new JPanelSouthEast();
+    public JPanelSouth(ActionListener l) {
+        this.southEast = new JPanelSouthEast(l);
         this.southWest = new JPanelSouthWest();
         init();
     }
@@ -19,5 +20,13 @@ public class JPanelSouth extends JPanel {
         this.setLayout(new BorderLayout());
         this.add(southEast, BorderLayout.EAST);
         this.add(southWest, BorderLayout.WEST);
+    }
+
+    public String getSelectedSlot() {
+        return southEast.getSelectedSlot();
+    }
+
+    public void updatePic(String name) {
+        southEast.updatePic(name);
     }
 }
