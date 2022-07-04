@@ -15,7 +15,9 @@ public class JPanelChosenBet extends JPanel {
 
     private void init() {
 //        this.setBorder(BorderFactory.createLineBorder(Color.BLACK));
-        this.setLayout(new FlowLayout());
+        this.setLayout(null);
+        firstBet.setBounds(10,20,50,50);
+        firstBet.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         this.add(firstBet);
         this.add(secondBet);
         this.add(thirdBet);

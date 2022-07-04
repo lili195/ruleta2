@@ -2,16 +2,16 @@ package com.uptc.prg3.roulette.client.view;
 
 public class Constants {
     // RUTAS DE LAS IMAGENES
-    public static final String PATH_IMG1 = "src/resourses/images/bananas.png";
-    public static final String PATH_IMG2 = "src/resourses/images/bar.png";
-    public static final String PATH_IMG3 = "src/resourses/images/seven.png";
-    public static final String PATH_IMG4 = "src/resourses/images/luck.png";
-    public static final String PATH_IMG5 = "src/resourses/images/grapes.png";
-    public static final String PATH_IMG6 = "src/resourses/images/watermelon.png";
-    public static final String PATH_IMG7 = "src/resourses/images/lemon.png";
-    public static final String PATH_IMG8 = "src/resourses/images/diamond.png";
-    public static final String PATH_IMG9 = "src/resourses/images/singleGrape.png";
-    public static final String PATH_IMG10 = "src/resourses/images/cherries.png";
+    public static final String PATH_IMG1 = "resources/images/bananas.png";
+    public static final String PATH_IMG2 = "resources/images/bar.png";
+    public static final String PATH_IMG3 = "resources/images/seven.png";
+    public static final String PATH_IMG4 = "resources/images/luck.png";
+    public static final String PATH_IMG5 = "resources/images/grapes.png";
+    public static final String PATH_IMG6 = "resources/images/watermelon.png";
+    public static final String PATH_IMG7 = "resources/images/lemon.png";
+    public static final String PATH_IMG8 = "resources/images/diamond.png";
+    public static final String PATH_IMG9 = "resources/images/singleGrape.png";
+    public static final String PATH_IMG10 = "resources/images/cherries.png";
     //  NOMBRES DE BOTONES
     public static final String RANKIN_BTN_TEXT = "RANKIN";
     public static final String INFO_BTN_TEXT = "INFO";
