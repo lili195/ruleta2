@@ -2,7 +2,7 @@ package com.uptc.prg3.roulette.client.view;
 
 import javax.swing.*;
 
-public class JPanelTable extends JDialog {
+public class JDialogScoreTable extends JDialog {
     private JLabel labTittle;
     private JButton btnExit;
     private JTable table;
