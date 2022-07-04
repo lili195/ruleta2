@@ -54,6 +54,7 @@ public class RunnerClient implements ActionListener {
                 break;
             case "play":
                 jWindowMain.startRoulettes(true);
+                break;
         }
     }
 }
