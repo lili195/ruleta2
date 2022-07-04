@@ -1,4 +1,4 @@
-package com.uptc.prg3.roulette.server.circularList;
+package com.uptc.prg3.roulette.server.dataStructure;
 
 import java.util.Comparator;
 

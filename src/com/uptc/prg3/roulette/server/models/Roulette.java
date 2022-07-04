@@ -2,7 +2,7 @@ package com.uptc.prg3.roulette.server.models;
 
 import java.util.Random;
 
-import com.uptc.prg3.roulette.server.circularList.SimpleCirularList;
+import com.uptc.prg3.roulette.server.dataStructure.SimpleCirularList;
 
 public class Roulette <T> extends SimpleCirularList <T> implements Runnable {
     private static final long REFRESH_TIME = 10;
@@ -54,5 +54,14 @@ public class Roulette <T> extends SimpleCirularList <T> implements Runnable {
         for (int i = 0; i < random.nextInt(100); i++) {
             this.next();
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Roulette{" +
+                "speed=" + speed +
+                ", random=" + random +
+                ", running=" + running +
+                '}';
     }
 }

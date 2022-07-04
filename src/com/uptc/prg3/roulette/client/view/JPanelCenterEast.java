@@ -47,6 +47,10 @@ public class JPanelCenterEast extends JPanel {
         this.setBorder(BorderFactory.createLineBorder(Color.BLACK));
     }
 
+    protected double getBet() {
+        return Double.parseDouble(this.betOptions[this.betOption.getSelectedIndex()]);
+    }
+
     public void setEarningsText(String earnings) {
         this.earningResult.setText(earnings);
     }

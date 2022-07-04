@@ -1,6 +1,6 @@
 package testRoulette;
 
-import com.uptc.prg3.roulette.server.circularList.SimpleCirularList;
+import com.uptc.prg3.roulette.server.dataStructure.SimpleCirularList;
 
 import java.util.Comparator;
 

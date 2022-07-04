@@ -1,12 +1,14 @@
 package com.uptc.prg3.roulette.client.view;
 
+import com.uptc.prg3.roulette.client.controllers.RunnerClient;
+
 import javax.swing.*;
 import java.awt.*;
 
 public class JPanelTopBar extends JPanel {
     private JButton rankingBtn, infoBtn, exitBtn;
     private JPanel leftSide, middle, rightSide;
-    private JLabel rouletteLbl, timeLbl;
+    private JLabel rouletteLbl, timeLbl, timeScore;
 
     public JPanelTopBar() {
         super();
@@ -17,6 +19,7 @@ public class JPanelTopBar extends JPanel {
         this.leftSide = new JPanel();
         this.rouletteLbl = new JLabel();
         this.timeLbl = new JLabel();
+        this.timeScore = new JLabel();
         this.middle = new JPanel();
         this.rightSide = new JPanel();
         initComponents();
@@ -33,14 +36,21 @@ public class JPanelTopBar extends JPanel {
 
         rouletteLbl.setText(Constants.MAIN_TITTLE_TEXT);
         timeLbl.setText(Constants.TIME_TITTLE_TEXT);
+        timeScore.setText("" + RunnerClient.TIME_SLEEP_INTERVAL);
         middle.setLayout(new FlowLayout(FlowLayout.CENTER));
         middle.add(rouletteLbl);
         middle.add(timeLbl);
+        middle.add(this.timeScore);
         this.add(middle);
 
         exitBtn.setText(Constants.EXIT_BTN_TEXT);
         rightSide.setLayout(new FlowLayout());
         rightSide.add(exitBtn);
         this.add(rightSide);
+    }
+
+    protected void setTimeScore(int timeScore) {
+        this.timeScore.setText("" + timeScore);
+        this.timeScore.updateUI();
     }
 }

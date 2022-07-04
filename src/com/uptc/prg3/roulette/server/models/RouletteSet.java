@@ -1,10 +1,23 @@
 package com.uptc.prg3.roulette.server.models;
 
+import java.util.Arrays;
+
 public class RouletteSet <T> {
     private Roulette<T>[] roulettes;
 
+    public RouletteSet() {
+    }
+
     public RouletteSet(Roulette<T>[] roulettes) {
         this.roulettes = roulettes;
+    }
+
+    public Roulette<T>[] getRoulettes() {
+        return roulettes;
+    }
+
+    public double getScore() {
+        return 0;
     }
 
     public void start() {
@@ -26,5 +39,12 @@ public class RouletteSet <T> {
                 roulette.insert(img);
             }
         }
+    }
+
+    @Override
+    public String toString() {
+        return "RouletteSet{" +
+                "roulettes=" + Arrays.toString(roulettes) +
+                '}';
     }
 }

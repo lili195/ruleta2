@@ -29,4 +29,12 @@ public class JWindowMain extends JWindow {
 
         this.setVisible(true);
     }
+
+    public double getBet() {
+        return this.center.getBet();
+    }
+
+    public void setTimeScore(int timeScore) {
+        this.topBar.setTimeScore(timeScore);
+    }
 }
