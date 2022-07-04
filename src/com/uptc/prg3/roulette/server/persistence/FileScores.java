@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.util.ArrayList;
 
-import com.google.gson.Gson;
+import com.google.gson;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
 import com.uptc.prg3.roulette.server.models.Score;
@@ -13,7 +13,7 @@ import com.uptc.prg3.roulette.server.models.Score;
 
 public class FileScores {
 
-	private static final String ROUTE_FILE = "./resources/percistence/scores.sp";
+	private static final String ROUTE_FILE = "./resources/scores.sp";
 	private Gson gson;
 	private RandomAccessFile file;
 
