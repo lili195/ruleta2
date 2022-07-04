@@ -24,4 +24,10 @@ public class JPanelRouletteSet extends JPanel {
             this.add(jPanelRoulette);
         }
     }
+
+    public void startRoulettes(boolean b) {
+        for (int i = 0; i < rPanels.length; i++) {
+            rPanels[i].startRoulette(b);
+        }
+    }
 }

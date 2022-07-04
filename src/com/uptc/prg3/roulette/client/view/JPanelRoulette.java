@@ -8,7 +8,6 @@ import java.awt.event.ActionListener;
 public class JPanelRoulette extends JPanel {
     private JLabel pic;
     private Timer tm;
-    private ImageIcon[] images;
     private ImageIcon icon, newImc;
     private Image img, newImg;
     private JPanel slidesShow;
@@ -20,11 +19,13 @@ public class JPanelRoulette extends JPanel {
                                     Constants.PATH_IMG6,
                                     Constants.PATH_IMG7,
                                     Constants.PATH_IMG8,
-                                    Constants.PATH_IMG9};
+                                    Constants.PATH_IMG9,
+                                    Constants.PATH_IMG10};
     
     public JPanelRoulette() {
         super();
-        setImageSize(8);
+        pic = new JLabel();
+        setImageSize(9);
         init();
     }
 
@@ -33,7 +34,7 @@ public class JPanelRoulette extends JPanel {
         this.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         this.slidesShow = new JPanel(new FlowLayout());
         slidesShow.setBackground(Color.WHITE);
-        tm = new Timer(1000,new ActionListener() {
+        tm = new Timer(2000,new ActionListener() {
             int x = 0;
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -52,9 +53,13 @@ public class JPanelRoulette extends JPanel {
         img = icon.getImage();
         newImg = img.getScaledInstance(150, 150, Image.SCALE_DEFAULT);
         newImc = new ImageIcon(newImg);
-        pic = new JLabel();
         pic.setIcon(newImc);
     }
 
-
+    public void startRoulette(boolean b) {
+        if (b)
+            this.tm.start();
+        else
+            this.tm.stop();
+    }
 }

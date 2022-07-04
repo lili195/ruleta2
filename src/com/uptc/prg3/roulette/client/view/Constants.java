@@ -10,7 +10,7 @@ public class Constants {
     public static final String PATH_IMG6 = "resources/images/watermelon.png";
     public static final String PATH_IMG7 = "resources/images/lemon.png";
     public static final String PATH_IMG8 = "resources/images/diamond.png";
-    public static final String PATH_IMG9 = "resources/images/singleGrape.png";
+    public static final String PATH_IMG9 = "resources/images/grape.png";
     public static final String PATH_IMG10 = "resources/images/cherries.png";
     //  NOMBRES DE BOTONES
     public static final String RANKIN_BTN_TEXT = "RANKIN";
@@ -18,14 +18,16 @@ public class Constants {
     public static final String MAIN_TITTLE_TEXT = "     RULETA    ";
     public static final String TIME_TITTLE_TEXT = "   TIEMPO RESTANTE: ";
     public static final String EXIT_BTN_TEXT = "SALIR";
-// HEAD
+    // HEAD
     public static final String PLAY_BTN_TEXT = "JUGAR";
-//=======
+
     public static final String EXIT_BTN_TO_MAIN = "VOLVER A LA VENTAN PRINCIPAL";
-//>>>>>>> 89590888d10c7e6e9f9aee34eceb3109e9e1eca9
+
     //  LABELS DE LA APUESTA
-    public static final String BET_TEXT = "APUESTA";
+    public static final String BET_TEXT = "APUESTA YA!";
     public static final String EARNINGS_TEXT = "GANANCIAS";
+
+    public static final String CHOICE_TEXT= "Elije las fichas a apostar: ";
     //  LISTA DE VALORES QUE PUEDE GANAR EL CLIENTE SEGUN LOS ACIERTOS
     public static final String FIRST_POINT_OP = "100";
     public static final String SECOND_POINT_OP = "150";
@@ -42,5 +44,27 @@ public class Constants {
     public static final String LOGIN_NICK_TEXT = "Escribe tu nombre de jugador";
     public static final String LOGIN_OKBTN_TEXT = "Aceptar";
     public static final String LOGIN_CANCELBTN_TEXT = "Cancelar";
+
+    // NOMBRES DE LAS FICHAS EN EL COMBOBOX
+    public static final String BANANA_COMBO = "Bananas";
+    public static final String BAR_COMBO = "Bar";
+    public static final String CHERRIES_COMBO = "Cherries";
+    public static final String DIAMOND_COMBO = "Diamond";
+    public static final String GRAPES_COMBO = "grapes";
+    public static final String LEMON_COMBO = "Lemon";
+    public static final String LUCK_COMBO = "Luck";
+    public static final String SEVEN_COMBO = "Seven";
+    public static final String SINGLE_GRAPE_COMBO = "Grape";
+    public static final String WATERMELON_COMBO = "Watermelon";
+
+    //COMANDOS
+    public static final String COMBO_COMMAND = "chose";
+    public static final String EXIT_COMMAND = "exit";
+    public static final String RANKIN_COMMAND = "rankin";
+    public static final String PLAY_COMMAND = "play";
+
+
+
+
 }
 

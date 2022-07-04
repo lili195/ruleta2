@@ -4,13 +4,14 @@ import com.uptc.prg3.roulette.client.controllers.RunnerClient;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 
 public class JPanelTopBar extends JPanel {
     private JButton rankingBtn, infoBtn, exitBtn;
     private JPanel leftSide, middle, rightSide;
     private JLabel rouletteLbl, timeLbl, timeScore;
 
-    public JPanelTopBar() {
+    public JPanelTopBar(ActionListener l) {
         super();
         this.setLayout(new FlowLayout());
         this.rankingBtn = new JButton();
@@ -22,11 +23,13 @@ public class JPanelTopBar extends JPanel {
         this.timeScore = new JLabel();
         this.middle = new JPanel();
         this.rightSide = new JPanel();
-        initComponents();
+        initComponents(l);
     }
 
-    private void initComponents() {
+    private void initComponents(ActionListener l) {
         rankingBtn.setText(Constants.RANKIN_BTN_TEXT);
+        rankingBtn.setActionCommand(Constants.RANKIN_COMMAND);
+        rankingBtn.addActionListener(l);
         infoBtn.setText(Constants.INFO_BTN_TEXT);
 
         leftSide.setLayout(new FlowLayout());
@@ -44,6 +47,8 @@ public class JPanelTopBar extends JPanel {
         this.add(middle);
 
         exitBtn.setText(Constants.EXIT_BTN_TEXT);
+        exitBtn.addActionListener(l);
+        exitBtn.setActionCommand(Constants.EXIT_COMMAND);
         rightSide.setLayout(new FlowLayout());
         rightSide.add(exitBtn);
         this.add(rightSide);

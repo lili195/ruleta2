@@ -10,10 +10,13 @@ public class JPanelCenterWest extends JPanel {
         this.rouletteSet = new JPanelRouletteSet();
         init();
     }
-
     private void init() {
         this.setLayout(new FlowLayout());
         this.add(rouletteSet);
+    }
+
+    public void startRoulettes(boolean b) {
+        rouletteSet.startRoulettes(b);
     }
 
 }
