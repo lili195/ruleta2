@@ -39,6 +39,7 @@ public class JPanelRoulette extends JPanel {
                     x = 0;
             }
         });
+        this.add(pic);
     }
 
     public void setImageSize(int i) {
