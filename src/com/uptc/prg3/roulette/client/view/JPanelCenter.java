@@ -21,7 +21,7 @@ public class JPanelCenter extends JPanel {
         this.add(centerWest);
     }
 
-    protected double getBet() {
-        return this.centerEast.getBet();
-    }
+//    protected double getBet() {
+//        return this.centerEast.getBet();
+//    }
 }

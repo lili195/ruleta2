@@ -18,10 +18,11 @@ public class Constants {
     public static final String MAIN_TITTLE_TEXT = "     RULETA    ";
     public static final String TIME_TITTLE_TEXT = "   TIEMPO RESTANTE: ";
     public static final String EXIT_BTN_TEXT = "SALIR";
+    public static final String PLAY_BTN_TEXT = "JUGAR";
     //  LABELS DE LA APUESTA
     public static final String BET_TEXT = "APUESTA";
     public static final String EARNINGS_TEXT = "GANANCIAS";
-    //  LISTA DE VALORES QUE EL CLIENTE PUEDE ELGIR PARA APOSTAR
+    //  LISTA DE VALORES QUE PUEDE GANAR EL CLIENTE SEGUN LOS ACIERTOS
     public static final String FIRST_POINT_OP = "100";
     public static final String SECOND_POINT_OP = "150";
     public static final String THIRD_POINT_OP = "300";

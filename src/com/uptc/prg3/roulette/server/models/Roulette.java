@@ -6,7 +6,7 @@ import com.uptc.prg3.roulette.server.dataStructure.SimpleCirularList;
 
 public class Roulette <T> extends SimpleCirularList <T> implements Runnable {
     private static final long REFRESH_TIME = 10;
-    private double speed; //unidades -> nodos/seg, gira a una determinadad velocidad
+    private double speed;
     private Random random;
     private boolean running; //flag
 
@@ -15,6 +15,10 @@ public class Roulette <T> extends SimpleCirularList <T> implements Runnable {
         this.random = new Random();
         this.speed = speed;
         this.running = false;
+    }
+
+    public Roulette() {
+
     }
 
     public void start() {

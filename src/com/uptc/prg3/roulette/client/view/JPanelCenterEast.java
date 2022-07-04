@@ -5,17 +5,12 @@ import java.awt.*;
 
 public class JPanelCenterEast extends JPanel {
     private JLabel bet, earnings,earningResult;
-    private JComboBox betOption;
-    private String[] betOptions = { Constants.FIRST_POINT_OP,
-                                    Constants.SECOND_POINT_OP,
-                                    Constants.THIRD_POINT_OP,
-                                    Constants.FOURTH_POINT_OP,
-                                    Constants.FIFTH_POINT_OP};
+    private JButton startBtn;
     private JPanel top, bottom, earningsPanel;
 
     public JPanelCenterEast() {
         this.bet = new JLabel();
-        this.betOption = new JComboBox(this.betOptions);
+        this.startBtn = new JButton();
         this.earnings = new JLabel();
         this.earningResult = new JLabel("xxxx");
         this.top = new JPanel();
@@ -27,10 +22,11 @@ public class JPanelCenterEast extends JPanel {
         this.setPreferredSize(new Dimension(150,200));
         this.setLayout(null);
         bet.setText(Constants.BET_TEXT);
+        startBtn.setText(Constants.PLAY_BTN_TEXT);
         top.setBounds(25,10,100,50);
         top.setLayout(new BoxLayout(top, BoxLayout.Y_AXIS));
         top.add(bet);
-        top.add(betOption);
+        top.add(startBtn);
 
         this.add(top);
 
@@ -45,10 +41,6 @@ public class JPanelCenterEast extends JPanel {
 
         this.add(bottom);
         this.setBorder(BorderFactory.createLineBorder(Color.BLACK));
-    }
-
-    protected double getBet() {
-        return Double.parseDouble(this.betOptions[this.betOption.getSelectedIndex()]);
     }
 
     public void setEarningsText(String earnings) {
