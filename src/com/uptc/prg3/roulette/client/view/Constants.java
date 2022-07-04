@@ -18,7 +18,11 @@ public class Constants {
     public static final String MAIN_TITTLE_TEXT = "     RULETA    ";
     public static final String TIME_TITTLE_TEXT = "   TIEMPO RESTANTE: ";
     public static final String EXIT_BTN_TEXT = "SALIR";
+// HEAD
     public static final String PLAY_BTN_TEXT = "JUGAR";
+//=======
+    public static final String EXIT_BTN_TO_MAIN = "VOLVER A LA VENTAN PRINCIPAL";
+//>>>>>>> 89590888d10c7e6e9f9aee34eceb3109e9e1eca9
     //  LABELS DE LA APUESTA
     public static final String BET_TEXT = "APUESTA";
     public static final String EARNINGS_TEXT = "GANANCIAS";

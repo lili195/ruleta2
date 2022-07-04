@@ -1,0 +1,6 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "e:\\cosas de la u\\progra III-v2\\examples\\gson-2.8.6.jar"
+    ]
+}
